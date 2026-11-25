@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Trust Observatory Event",
+  "type": "object",
+  "required": ["event_id", "event_type", "timestamp", "experiment_id", "source", "evidence_status"],
+  "properties": {
+    "event_id": {"type": "string", "minLength": 1},
+    "event_type": {"type": "string", "enum": ["experiment.started", "prompt.egress_checked", "inference.request_sent", "route.observed", "canary.callback_observed", "sandbox.credential_validation_attempt", "experiment.completed"]},
+    "timestamp": {"type": "string", "format": "date-time"},
+    "experiment_id": {"type": "string", "minLength": 1},
+    "request_id": {"type": "string"},
+    "provider": {"type": "string"},
+    "model": {"type": "string"},
+    "route_id": {"type": "string"},
+    "canary_id": {"type": "string"},
+    "source": {"type": "string", "description": "System that produced the observation."},
+    "evidence_status": {"type": "string", "enum": ["observed", "inferred", "inconclusive"]},
+    "severity": {"type": "string", "enum": ["info", "low", "medium", "high", "critical"]},
+    "details": {"type": "object", "additionalProperties": true}
+  },
+  "additionalProperties": false
+}
