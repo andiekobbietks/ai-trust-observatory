@@ -6,6 +6,16 @@ AI Trust Observatory investigates how organisations can observe AI inference rou
 
 > **Status: early-stage research scaffold.** This project is not a commercial AI firewall, provider certification, or proof of Zero Data Retention.
 
+## Research provenance and attribution
+
+This project is independently developed and is **inspired by** Dragos's research by HD Moore, *[Three breaches, endless leaks: Your AI supply chain needs canaries](https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens/)* (19 November 2026).
+
+The Dragos investigation used unique canary URLs and credential-shaped tokens in approximately two million prompts sent through AI services between July and November 2026. It reported evidence of provider compromises, prompt access by inference resellers, unexpected downstream data handling, and privacy-control failures.
+
+AI Trust Observatory takes that work as its research motivation. It aims to explore reusable, open-source methods for controlled synthetic-canary experiments, inference-route visibility, event correlation and evidence reporting.
+
+**Attribution boundary:** Dragos and HD Moore are the source of the cited investigation, not the authors, maintainers, sponsors or endorsers of this project. This repository is an independent implementation and research effort. It does not reproduce Dragos's proprietary tooling or claim to validate its findings independently.
+
 ## Research objectives
 
 - Inventory providers, models, endpoints, routers and declared subprocessors.
